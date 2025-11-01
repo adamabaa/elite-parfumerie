@@ -8,6 +8,10 @@
   ],
   "rewrites": [
     { 
+      "source": "/",
+      "destination": "/public/index.html"
+    },
+    { 
       "source": "/boutique",
       "destination": "/public/boutique.html"
     },
@@ -26,10 +30,6 @@
     {
       "source": "/assets/:path*",
       "destination": "/public/assets/:path*"
-    },
-    {
-      "source": "/:path*",
-      "destination": "/public/index.html"
     }
   ],
   "headers": [
