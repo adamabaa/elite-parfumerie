@@ -27,11 +27,11 @@
       "destination": "/public/contact.html"
     },
     {
-      "source": "/(.*\\.(ico|png|jpg|jpeg|webp|gif|svg|css|js|woff|woff2|ttf|eot))",
-      "destination": "/public/$1"
+      "source": "/assets/:path*",
+      "destination": "/public/assets/:path*"
     },
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "destination": "/public/index.html"
     }
   ],
