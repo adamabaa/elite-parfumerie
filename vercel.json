@@ -1,35 +1,39 @@
 {
   "version": 2,
+  "cleanUrls": true,
   "builds": [
     {
       "src": "public/**",
       "use": "@vercel/static"
     }
   ],
-  "rewrites": [
-    { 
-      "source": "/",
-      "destination": "/public/index.html"
-    },
-    { 
-      "source": "/boutique",
-      "destination": "/public/boutique.html"
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/public/index.html"
     },
     {
-      "source": "/panier",
-      "destination": "/public/panier.html"
+      "src": "/boutique",
+      "dest": "/public/boutique.html"
     },
     {
-      "source": "/commande",
-      "destination": "/public/commande.html"
+      "src": "/panier",
+      "dest": "/public/panier.html"
     },
     {
-      "source": "/contact",
-      "destination": "/public/contact.html"
+      "src": "/commande",
+      "dest": "/public/commande.html"
     },
     {
-      "source": "/assets/:path*",
-      "destination": "/public/assets/:path*"
+      "src": "/contact",
+      "dest": "/public/contact.html"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/public/assets/$1"
+    },
+    {
+      "handle": "filesystem"
     }
   ],
   "headers": [
