@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Élite Parfumerie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">Élite</span> Parfumerie
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="boutique.html">Boutique</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="panier.html" class="btn btn-outline-light ms-3 position-relative">
+                    <i class="fas fa-shopping-bag"></i>
+                    Panier
+                    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-gold">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header py-5 mt-5">
+        <div class="container">
+            <h1 class="text-center display-4 fw-bold">Contactez-nous</h1>
+            <p class="text-center lead text-muted">Nous sommes à votre écoute pour toute question</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-4">
+                    <div class="contact-form p-4">
+                        <h5 class="mb-4">Envoyez-nous un message</h5>
+                        <form id="contact-form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="contact-name" class="form-label">Nom *</label>
+                                    <input type="text" class="form-control" id="contact-name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="contact-email" class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="contact-email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contact-subject" class="form-label">Sujet *</label>
+                                <input type="text" class="form-control" id="contact-subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contact-message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="contact-message" rows="5" required></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info p-4">
+                        <h5 class="mb-4">Nos coordonnées</h5>
+                        <div class="mb-4">
+                            <h6><i class="fas fa-map-marker-alt me-2"></i>Adresse</h6>
+                            <p>123 Avenue des Champs-Élysées<br>75008 Paris, France</p>
+                        </div>
+                        <div class="mb-4">
+                            <h6><i class="fas fa-phone me-2"></i>Téléphone</h6>
+                            <p>+33 1 23 45 67 89</p>
+                        </div>
+                        <div class="mb-4">
+                            <h6><i class="fas fa-envelope me-2"></i>Email</h6>
+                            <p>contact@elegance-parfumee.fr</p>
+                        </div>
+                        <div class="mb-4">
+                            <h6><i class="fas fa-clock me-2"></i>Horaires d'ouverture</h6>
+                            <p>Lundi - Samedi: 10h00 - 19h00<br>Dimanche: 11h00 - 17h00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="store-info p-4 mt-4">
+                        <h6 class="mb-3">Notre boutique</h6>
+                        <p class="small text-muted">
+                            Venez découvrir nos parfums en boutique et bénéficier des conseils 
+                            personnalisés de nos experts parfumeurs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="map-placeholder p-5 text-center">
+                        <i class="fas fa-map-marked-alt fa-3x mb-3 text-muted"></i>
+                        <h5>Carte de localisation</h5>
+                        <p class="text-muted">Notre boutique située au cœur de Paris</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="brand-footer">Élite Parfumerie</h5>
+                    <p>Votre destination pour des parfums d'exception.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Boutique</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="boutique.html?category=homme" class="text-light">Parfums Homme</a></li>
+                        <li><a href="boutique.html?category=femme" class="text-light">Parfums Femme</a></li>
+                        <li><a href="boutique.html?category=mixte" class="text-light">Parfums Mixte</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Informations</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                        <li><a href="#" class="text-light">Livraison</a></li>
+                        <li><a href="#" class="text-light">Retours</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Contact</h5>
+                    <p class="text-light">
+                        <i class="fas fa-map-marker-alt me-2"></i>123 Av. des Champs-Élysées, Paris<br>
+                        <i class="fas fa-phone me-2"></i>+33 1 23 45 67 89<br>
+                        <i class="fas fa-envelope me-2"></i>contact@elegance-parfumee.fr
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Élite Parfumerie. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">Mentions légales</a>
+                    <a href="#" class="text-light">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fa-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>

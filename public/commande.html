@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande - Élite Parfumerie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">Élite</span> Parfumerie
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="boutique.html">Boutique</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="panier.html" class="btn btn-outline-light ms-3 position-relative">
+                    <i class="fas fa-shopping-bag"></i>
+                    Panier
+                    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-gold">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header py-5 mt-5">
+        <div class="container">
+            <h1 class="text-center display-4 fw-bold">Finaliser votre commande</h1>
+        </div>
+    </section>
+
+    <!-- Checkout Form -->
+    <section class="py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="checkout-form p-4">
+                        <form id="order-form">
+                            <h5 class="mb-4">Informations personnelles</h5>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstname" class="form-label">Prénom *</label>
+                                    <input type="text" class="form-control" id="firstname" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastname" class="form-label">Nom *</label>
+                                    <input type="text" class="form-control" id="lastname" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Téléphone *</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            
+                            <h5 class="mb-4 mt-5">Adresse de livraison</h5>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Adresse *</label>
+                                <input type="text" class="form-control" id="address" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="postal" class="form-label">Code postal *</label>
+                                    <input type="text" class="form-control" id="postal" required>
+                                </div>
+                                <div class="col-md-8 mb-3">
+                                    <label for="city" class="form-label">Ville *</label>
+                                    <input type="text" class="form-control" id="city" required>
+                                </div>
+                            </div>
+                            
+                            <h5 class="mb-4 mt-5">Paiement</h5>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="payment" id="card" value="card" checked>
+                                    <label class="form-check-label" for="card">
+                                        <i class="fab fa-cc-visa me-2"></i>Carte bancaire
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="payment" id="paypal" value="paypal">
+                                    <label class="form-check-label" for="paypal">
+                                        <i class="fab fa-paypal me-2"></i>PayPal
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div id="card-details">
+                                <div class="mb-3">
+                                    <label for="card-number" class="form-label">Numéro de carte *</label>
+                                    <input type="text" class="form-control" id="card-number" placeholder="1234 5678 9012 3456" required>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="expiry" class="form-label">Date d'expiration *</label>
+                                        <input type="text" class="form-control" id="expiry" placeholder="MM/AA" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cvv" class="form-label">CVV *</label>
+                                        <input type="text" class="form-control" id="cvv" placeholder="123" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="newsletter" checked>
+                                <label class="form-check-label" for="newsletter">
+                                    Je souhaite m'abonner à la newsletter
+                                </label>
+                            </div>
+                            
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg">Confirmer la commande</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="brand-footer">Élite Parfumerie</h5>
+                    <p>Votre destination pour des parfums d'exception.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Boutique</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="boutique.html?category=homme" class="text-light">Parfums Homme</a></li>
+                        <li><a href="boutique.html?category=femme" class="text-light">Parfums Femme</a></li>
+                        <li><a href="boutique.html?category=mixte" class="text-light">Parfums Mixte</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Informations</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                        <li><a href="#" class="text-light">Livraison</a></li>
+                        <li><a href="#" class="text-light">Retours</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Contact</h5>
+                    <p class="text-light">
+                        <i class="fas fa-map-marker-alt me-2"></i>123 Av. des Champs-Élysées, Paris<br>
+                        <i class="fas fa-phone me-2"></i>+33 1 23 45 67 89<br>
+                        <i class="fas fa-envelope me-2"></i>contact@elegance-parfumee.fr
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Élite Parfumerie. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">Mentions légales</a>
+                    <a href="#" class="text-light">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fa-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>
