@@ -1,40 +1,76 @@
-{{
+{{{
 
-  "version": 2,  "version": 2,
+  "version": 2,
 
-  "cleanUrls": true,  "builds": [
+  "cleanUrls": true,  "version": 2,  "version": 2,
 
-  "trailingSlash": false    {
+  "trailingSlash": false,
 
-}      "src": "public/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "outputDirectory": "public",
-  "rewrites": [
+  "headers": [  "cleanUrls": true,  "builds": [
+
     {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/boutique",
-      "destination": "/boutique.html"
-    },
-    {
-      "source": "/panier",
-      "destination": "/panier.html"
-    },
-    {
-      "source": "/commande",
-      "destination": "/commande.html"
-    },
-    {
-      "source": "/contact",
-      "destination": "/contact.html"
-    }
-  ],
-  "headers": [
-    {
+
+      "source": "/(.*)",  "trailingSlash": false    {
+
+      "headers": [
+
+        {}      "src": "public/**",
+
+          "key": "X-Content-Type-Options",      "use": "@vercel/static"
+
+          "value": "nosniff"    }
+
+        },  ],
+
+        {  "outputDirectory": "public",
+
+          "key": "X-Frame-Options",  "rewrites": [
+
+          "value": "DENY"    {
+
+        },      "source": "/",
+
+        {      "destination": "/index.html"
+
+          "key": "X-XSS-Protection",    },
+
+          "value": "1; mode=block"    {
+
+        },      "source": "/boutique",
+
+        {      "destination": "/boutique.html"
+
+          "key": "Referrer-Policy",    },
+
+          "value": "strict-origin-when-cross-origin"    {
+
+        }      "source": "/panier",
+
+      ]      "destination": "/panier.html"
+
+    },    },
+
+    {    {
+
+      "source": "/assets/(.*)",      "source": "/commande",
+
+      "headers": [      "destination": "/commande.html"
+
+        {    },
+
+          "key": "Cache-Control",    {
+
+          "value": "public, max-age=31536000, immutable"      "source": "/contact",
+
+        }      "destination": "/contact.html"
+
+      ]    }
+
+    }  ],
+
+  ]  "headers": [
+
+}    {
       "source": "/(.*)",
       "headers": [
         {
